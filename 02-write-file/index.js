@@ -23,13 +23,13 @@ rl.on('line', (line) => {
     process.exit(0);
     break;
   default:
-    console.log(`Line '${line.trim()}' has been added!`);
+    // console.log(`Line '${line.trim()}' has been added!`);
     fs.appendFile(filePath, line.trim() + '\n', (err) => {
       if(err) throw err;
     });
     break;
   }
-  rl.prompt();
+  // rl.prompt();
 }).on('close', () => {
   console.log('Have a great day!!!');
   process.exit(0);

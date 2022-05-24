@@ -12,7 +12,7 @@ fsPromises
       fs.stat(filePath, (err, stats) => {
         if(err) throw err;
         if (stats.isFile()) {
-          console.log(file.name.replace('.', ' - '), '-', ((stats.size)/1024).toFixed(3)+'kb');
+          console.log(file.name.replace('.', ' - '), '-', stats.size);
         }
       });
     });         
